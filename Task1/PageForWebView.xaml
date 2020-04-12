@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<forms:ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   xmlns:forms="http://xamarin.com/schemas/2014/forms"
+                   x:Class="Task1.PageForWebView">
+
+    <NavigationPage.TitleView>
+        <Label Text="WebView"
+               TextColor="Yellow"
+               FontSize="Header"
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="CenterAndExpand"/>
+    </NavigationPage.TitleView>
+
+    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+
+        <StackLayout Orientation="Horizontal" Padding="30" VerticalOptions="Start">
+
+            <WebView x:Name="WebView"
+                Source="https://docs.microsoft.com/en-us/xamarin/"
+                HorizontalOptions="FillAndExpand"
+                HeightRequest="750"
+                WidthRequest="950"/>
+
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" VerticalOptions="End" Padding="20">
+
+            <Button Text="Back"
+                    x:Name="backButton"
+                    Clicked="GoBack"
+                    BackgroundColor="MediumPurple"
+                    TextColor="Yellow"
+                    HeightRequest="40"
+                    WidthRequest="80"
+                    HorizontalOptions="StartAndExpand"/>
+
+            <Button Text="Forward"
+                    x:Name="forwardButton"
+                    Clicked="GoForward"
+                    BackgroundColor="MediumPurple"
+                    TextColor="Yellow"
+                    HeightRequest="40"
+                    WidthRequest="80"
+                    HorizontalOptions="EndAndExpand"/>
+        </StackLayout>
+
+    </StackLayout>
+
+</forms:ContentPage>

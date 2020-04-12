@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                   xmlns:forms="http://xamarin.com/schemas/2014/forms"
+             x:Class="XamarinFormsXamlSample.Views.EmployeeListPage"
+             Title="Employee List">
+     <NavigationPage.TitleView>
+          <StackLayout
+            Padding="0,0,10,0"
+            HeightRequest="50"
+            HorizontalOptions="FillAndExpand"
+            Orientation="Horizontal"
+            VerticalOptions="Center">
+            <Image
+                x:Name="qrCodeImage"
+                Aspect="AspectFit"
+                HorizontalOptions="End"
+                IsVisible="{Binding ShowQrScan}"
+                Source="logoPicture.jpg">
+              
+            </Image>
+        </StackLayout>
+    </NavigationPage.TitleView>
+  <ListView x:Name="EmployeeView"
+            ItemsSource="{Binding Employees}">
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <TextCell Text="{Binding DisplayName}" />
+      </DataTemplate>
+    </ListView.ItemTemplate>
+  </ListView>
+</ContentPage>

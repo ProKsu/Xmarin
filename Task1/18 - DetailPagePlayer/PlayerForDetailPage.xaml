@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Task1.DetailPagePlayer.PlayerForDetailPage"
+             Title="Media Player"
+             xmlns:mp = "clr-namespace:MediaManager.Forms;assembly=MediaManager.Forms"
+             >
+    <ContentPage.Content>
+        <StackLayout Padding="30">
+            <Button x:Name="PlayStopButtonText"  
+                    Text="Play"   
+                    Clicked="PlayStopButton"  
+                    TextColor="BlueViolet"/>
+            <StackLayout>
+                <mp:VideoView HeightRequest="200"  
+                              WidthRequest="200"
+                              VerticalOptions="FillAndExpand"
+                              Source="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+                              ShowControls="False" />
+            </StackLayout>
+            <StackLayout Orientation="Vertical" Padding="30" Margin="20">
+                <Editor Text="Start to write description..." HeightRequest="200" />
+
+                <DatePicker x:Name="Start"
+                            MinimumDate="2/08/2018"
+                            MaximumDate="12/10/2021"/>
+
+                <DatePicker x:Name="End"
+                            MinimumDate="{Binding Source={x:Reference Start}, Path=Date}"/>
+         
+ 
+             
+
+            </StackLayout>
+           
+            <Frame Padding="20" Margin="10">
+                <Button HeightRequest="20" WidthRequest="30" Text="Save"></Button> </Frame>  
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

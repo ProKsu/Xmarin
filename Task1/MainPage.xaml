@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Task1.MainPage">
+   
+    <StackLayout VerticalOptions="CenterAndExpand">
+
+        <Image Source="logoPicture.jpg"
+               Margin="20,20"
+               />
+       
+       <Entry Placeholder="Input login"
+               HorizontalTextAlignment="Center"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="Center"
+               Margin="10,20"
+               x:Name="emailEntry"
+               />
+
+        <Entry Placeholder="Input password"
+               VerticalOptions="Center"
+               HorizontalOptions="FillAndExpand"
+               HorizontalTextAlignment="Center"
+               Margin="10,20"
+               x:Name="passwordEntry"
+               IsPassword="True"
+               />
+
+        <Button CornerRadius="2"
+                Text="Next"
+                Clicked="GoToTheNextPage"
+                VerticalOptions="Center"
+                HorizontalOptions="Fill"
+                TextColor="Yellow"
+                BackgroundColor="Purple"
+                Margin="10,20"> 
+        </Button>
+
+        <Button CornerRadius="2"
+                x:Name="logOut"
+                IsEnabled="True"
+                Text="Log out"
+                Clicked="LogOut"
+                VerticalOptions="Center"
+                HorizontalOptions="Fill"
+                TextColor="Yellow"
+                BackgroundColor="Purple"
+                Margin="10,20"> 
+        </Button>
+          
+          <StackLayout Orientation="Horizontal" VerticalOptions="End">
+            <Button Text="Support"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Clicked="GoSupportPage"
+                    BackgroundColor="Purple"
+                    TextColor="Yellow"
+                    HeightRequest="40"
+                    WidthRequest="150"/>
+              </StackLayout>
+
+        <StackLayout Orientation="Horizontal" VerticalOptions="End">
+            <Button Text="Media Player"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Clicked="GoMediaPlayerPage"
+                    BackgroundColor="Purple"
+                    TextColor="Yellow"
+                    HeightRequest="40"
+                    WidthRequest="150"/>
+              </StackLayout>
+
+          <StackLayout Orientation="Horizontal" VerticalOptions="End">
+            <Button Text="Tabbed Page"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Clicked="GoToSearchPage"
+                    BackgroundColor="Purple"
+                    TextColor="Yellow"
+                    HeightRequest="40"
+                    WidthRequest="150"/>
+              </StackLayout>
+
+        
+    </StackLayout>
+</ContentPage>

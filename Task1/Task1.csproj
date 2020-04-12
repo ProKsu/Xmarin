@@ -1,0 +1,108 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.5.0.530" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.2" />
+    <PackageReference Include="Xamarin.Plugin.FilePicker" Version="2.1.34" />
+    <PackageReference Include="Xam.Plugin.Media" Version="5.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Plugin.MediaManager" Version="0.9.7" />
+    <PackageReference Include="Plugin.MediaManager.Forms" Version="0.9.7" />
+    <PackageReference Include="Xamarin.Forms.Maps" Version="4.5.0.530" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.6.292" />
+    <PackageReference Include="FirebaseDatabase.net" Version="4.0.4" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="MyPage.cs" />
+    <Compile Remove="TwoPage.cs" />
+    <Compile Remove="Three_pageMaster.xaml.cs" />
+    <Compile Remove="Three_page.xaml.cs" />
+    <Compile Remove="Three_pageDetail.xaml.cs" />
+    <Compile Remove="Three_pageMenuItem.cs" />
+    <Compile Remove="MasterDetailPageMaster.xaml.cs" />
+    <Compile Remove="MasterDetailPageDetail.xaml.cs" />
+    <Compile Remove="MasterDetailPage.xaml.cs" />
+    <Compile Remove="MasterDetailPageMenuItem.cs" />
+    <Compile Remove="Application\Current\Properties\ContainsKey.cs" />
+    <Compile Remove="UIActionSheet.cs" />
+    <Compile Remove="MediaPlayerPage.xaml.cs" />
+    <Compile Remove="MediaPlayer.xaml.cs" />
+    <Compile Remove="TabbedPage.xaml.cs" />
+    <Compile Remove="TabbedPage1.xaml.cs" />
+    <Compile Remove="tabbedPage2.xaml.cs" />
+    <Compile Remove="TabbedPage2.xaml.cs" />
+    <Compile Remove="SettingsPage.xaml.cs" />
+    <Compile Remove="tabbedPage3.xaml.cs" />
+    <Compile Remove="TodayPage.xaml.cs" />
+    <Compile Remove="SupportPage.xaml.cs" />
+    <Compile Remove="SchedulePage.xaml.cs" />
+    <Compile Remove="Settings.xaml.cs" />
+    <Compile Remove="CorouselP1.xaml.cs" />
+    <Compile Remove="CorouselP2.xaml.cs" />
+    <Compile Remove="SearchBarPage.cs" />
+    <Compile Remove="DataService.xaml.cs" />
+    <Compile Remove="13-Map control\MapView.cs" />
+    <Compile Remove="CustomMapPage.xaml.cs" />
+    <Compile Remove="CustomMapRendered.cs" />
+    <Compile Remove="MapPageCS.cs" />
+    <Compile Remove="CustomPin.cs" />
+    <Compile Remove="14-BD\DataBasePage.xaml.cs" />
+    <Compile Remove="14-BD\DataBaseSQlite.xaml.cs" />
+    <Compile Remove="16 -Firebase\FetchFirebaseData.xaml.cs" />
+    <Compile Remove="16 -Firebase\FetchFirebaseData.xaml.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Three_page.xaml" />
+    <EmbeddedResource Remove="Three_pageDetail.xaml" />
+    <EmbeddedResource Remove="MasterDetailPageMaster.xaml" />
+    <EmbeddedResource Remove="Three_pageMaster.xaml" />
+    <EmbeddedResource Remove="MasterDetailPageDetail.xaml" />
+    <EmbeddedResource Remove="MasterDetailPage.xaml" />
+    <EmbeddedResource Remove="MediaPlayerPage.xaml" />
+    <EmbeddedResource Remove="MediaPlayer.xaml" />
+    <EmbeddedResource Remove="TabbedPage.xaml" />
+    <EmbeddedResource Remove="TabbedPage1.xaml" />
+    <EmbeddedResource Remove="tabbedPage2.xaml" />
+    <EmbeddedResource Remove="TabbedPage1.xaml" />
+    <EmbeddedResource Remove="TabbedPage2.xaml" />
+    <EmbeddedResource Remove="tabbedPage3.xaml" />
+    <EmbeddedResource Remove="TodayPage.xaml" />
+    <EmbeddedResource Remove="SupportPage.xaml" />
+    <EmbeddedResource Remove="SchedulePage.xaml" />
+    <EmbeddedResource Remove="CorouselP1.xaml" />
+    <EmbeddedResource Remove="CorouselP2.xaml" />
+    <EmbeddedResource Remove="DataService.xaml" />
+    <EmbeddedResource Remove="CustomMapPage.xaml" />
+    <EmbeddedResource Remove="14-BD\DataBasePage.xaml" />
+    <EmbeddedResource Remove="14-BD\DataBasePage.xaml" />
+    <EmbeddedResource Remove="14-BD\DataBaseSQlite.xaml" />
+    <EmbeddedResource Remove="16 -Firebase\FetchFirebaseData.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Application\Current\Properties\" />
+    <Folder Include="12 - RefreshView\" />
+    <Folder Include="13-Map control\" />
+    <Folder Include="14-BD\" />
+    <Folder Include="16 -Firebase\" />
+    <Folder Include="18 - DetailPagePlayer\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android">
+      <HintPath>..\..\..\..\..\Library\Frameworks\Xamarin.Android.framework\Versions\10.1.3.7\lib\xamarin.android\xbuild-frameworks\MonoAndroid\v9.0\Mono.Android.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

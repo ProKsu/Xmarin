@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Task1.SupportPage">
+
+    <NavigationPage.TitleView>
+        <Label Text="Support"
+               TextColor="Yellow"
+               FontSize="Header"
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="CenterAndExpand"/>
+    </NavigationPage.TitleView>
+
+    <ScrollView>
+
+        <StackLayout Orientation="Vertical" Padding="20">
+            <Label Text="With all things PF, your fastest path to
+                      resolutoion will be to talk to your club
+                      staff. Otherwise, please complete the
+                      form below."
+                TextColor="Purple"
+                HorizontalTextAlignment="Center"/>
+
+            <StackLayout Orientation="Vertical" Margin="10,20">
+                <Label Text="First Name *"
+                       TextColor="Purple"/>
+                <Entry Placeholder="Input name"
+                       x:Name="entryForFirstName"/>
+            </StackLayout>
+
+
+            <StackLayout Orientation="Vertical" Margin="10">
+                <Label Text="Last Name *"
+                       TextColor="Purple"/>
+                <Entry Placeholder="Input last name"
+                       x:Name="entryForLastName"/>
+            </StackLayout>
+
+
+            <StackLayout Orientation="Vertical" Margin="10,20">
+                <Label Text="Email Address*"
+                       TextColor="Purple"/>
+                <Entry Placeholder="Input email"
+                       x:Name="entryForEmail"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Margin="10,20">
+                <Label Text="Phone Type*"
+                       TextColor="Purple"
+                         />
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Padding="20">
+                    <CheckBox IsChecked="False" Color="Purple"/>
+                    <Label Text="iPhone"
+                           TextColor="Purple"
+                           VerticalOptions="Center"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <CheckBox IsChecked="False" Color="Purple"/>
+                    <Label Text="Android"
+                           TextColor="Purple"
+                           VerticalOptions="Center"/>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical" Margin="10,20">
+
+                <Label Text="Request Type *"
+                       TextColor="Purple"/>
+                <Button Text="Please Select"
+                        TextColor="Black"
+                        Clicked="ChooseRequestType"
+                        BackgroundColor="LightGray"
+                        x:Name="selectReason"/>
+               
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical" Margin="10,20">
+                <Label Text="Issue Description / Step to Recreate *"
+                    TextColor="Purple"/>
+                <Editor HeightRequest="140"
+                        WidthRequest="40"
+                        BackgroundColor="LightGray"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical" Margin="10,20">
+                <Label Text="Screenshot(s)"
+                   TextColor="Purple"/>
+                <StackLayout Orientation="Horizontal" >
+                      <Entry BackgroundColor="LightGray"
+                             HeightRequest="40"
+                             WidthRequest="300"/>
+                      <Button Text="Scr"
+                              BackgroundColor="Purple"
+                              TextColor="Yellow"
+                              HeightRequest="40"
+                              WidthRequest="50"
+                              Clicked="LoadPicture"
+                              />
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical" Margin="10,20">
+                <Label Text="A copy your responses will be sent your email."
+                   FontAttributes="Italic"
+                   TextColor="Purple"
+                       HorizontalOptions="Center"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical" Margin="10">
+
+                <Button Text="Enter Feedback"
+                     TextColor="Purple"
+                     BackgroundColor="Yellow"
+                     Clicked="SendEmail"
+                     />
+            </StackLayout>
+        </StackLayout>
+
+    </ScrollView>
+</ContentPage>
